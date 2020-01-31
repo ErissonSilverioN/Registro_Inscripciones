@@ -1,0 +1,29 @@
+﻿<Window x:Class="RegistroIncripciones.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegistroIncripciones"
+        mc:Ignorable="d"
+        Title="Menu" Height="400" Width="550">
+    <Grid>
+        <DockPanel>
+            
+            <Menu DockPanel.Dock="Top">
+                
+                <MenuItem Header="_Registros">
+                  <MenuItem x:Name="_RegistroPersona" Header= "_Registrar Personas" Click="_RegistroPersona_Click"/>
+                    <MenuItem x:Name="_RegistroInscripciones" Header="_Registrar Inscripciones" Click="_RegistroInscripciones_Click"/>
+                </MenuItem>
+
+                <MenuItem Header="Consultas">
+                  <MenuItem Name="_ConsultaInscripciones" Header="_Consultar Inscripciones" Click="_ConsultaInscripciones_Click" />
+                    <MenuItem Name="_ConsultaPersonas"  Header="_Consultar Personas" Click="_ConsultaPersonas_Click"/>
+                </MenuItem>
+                
+            </Menu>
+            
+        </DockPanel>
+        
+    </Grid>
+</Window>
