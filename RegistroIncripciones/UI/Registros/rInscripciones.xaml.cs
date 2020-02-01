@@ -24,7 +24,8 @@ namespace RegistroIncripciones.UI.Registros
         {
             InitializeComponent();
             idTextBox.Text = "0";
-            personaidTextBox.Text = "0";
+            montoTextBox.Text = "0";
+           // personaidTextBox.Text = "0";
             LlenaCombo();
         }
 
@@ -43,7 +44,7 @@ namespace RegistroIncripciones.UI.Registros
             comentarioTextBox.Text = string.Empty;
             fechaDatePicker.SelectedDate = DateTime.Now;
             idTextBox.Text = "0";
-            personaidTextBox.Text = "0";
+          //  personaidTextBox.Text = "0";
            // balanceTextBox.Text = string.Empty;
 
         }
@@ -53,7 +54,8 @@ namespace RegistroIncripciones.UI.Registros
             Inscripciones inscripciones = new Inscripciones();
 
             inscripciones.InscripcionId = Convert.ToInt32(idTextBox.Text);
-            inscripciones.PersonaId = Convert.ToInt32(personaidTextBox.Text);
+            // inscripciones.PersonaId = Convert.ToInt32(personaidTextBox.Text);
+            inscripciones.PersonaId = Convert.ToInt32(PersonaComboBox.SelectedValue);
             inscripciones.Monto = Convert.ToDecimal(montoTextBox.Text);
             inscripciones.Comentario = comentarioTextBox.Text;
             inscripciones.Fecha = fechaDatePicker.DisplayDate;
@@ -67,7 +69,9 @@ namespace RegistroIncripciones.UI.Registros
         private void LlenaCampo(Inscripciones inscripciones)
         {
             idTextBox.Text = Convert.ToString(inscripciones.InscripcionId);
-            personaidTextBox.Text = Convert.ToString(inscripciones.PersonaId);
+            // personaidTextBox.Text = Convert.ToString(inscripciones.PersonaId);
+            PersonaComboBox.SelectedValue = inscripciones.PersonaId;
+
             montoTextBox.Text = Convert.ToString(inscripciones.Monto);
             comentarioTextBox.Text = inscripciones.Comentario;
             fechaDatePicker.SelectedDate = inscripciones.Fecha;

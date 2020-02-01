@@ -25,6 +25,7 @@ namespace RegistroIncripciones.UI.Registros
         {
             InitializeComponent();
             balanceTextBox.Text = "0";
+            IdTextBox.Text = "0";
         }
 
         private void Limpiar()

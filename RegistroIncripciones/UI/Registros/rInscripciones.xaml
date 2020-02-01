@@ -5,23 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegistroIncripciones.UI.Registros"
         mc:Ignorable="d"
-        Title="rInscripciones" Height="380" Width="500">
+        Title="rInscripciones" Height="355" Width="450" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
     <Grid>
-        <Label Content="ID" HorizontalAlignment="Left" Margin="31,37,0,0" VerticalAlignment="Top" Height="30" Width="83"/>
-        <Label Content="Monto:" HorizontalAlignment="Left" Margin="22,159,0,0" VerticalAlignment="Top" Height="30" Width="83"/>
-        <Label Content="Comentario:" HorizontalAlignment="Left" Margin="23,200,0,0" VerticalAlignment="Top" Height="30" Width="83"/>
-        <Label Content="Fecha" HorizontalAlignment="Left" Margin="282,35,0,0" VerticalAlignment="Top" Height="30" Width="83"/>
-        <TextBox x:Name="idTextBox" HorizontalAlignment="Left" Margin="63,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" Height="25"/>
-        <TextBox x:Name="montoTextBox" HorizontalAlignment="Left" Margin="120,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
-        <TextBox x:Name="comentarioTextBox" HorizontalAlignment="Left" Margin="119,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176"/>
-        <DatePicker x:Name="fechaDatePicker" HorizontalAlignment="Left" Margin="333,37,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="nuevoButton" Content="Nuevo" HorizontalAlignment="Left" Margin="36,266,0,0" VerticalAlignment="Top" Height="39" Width="93" Click="nuevoButton_Click"/>
-        <Button x:Name="guardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="184,263,0,0" VerticalAlignment="Top" Height="39" Width="93" Click="guardarButton_Click"/>
-        <Button x:Name="eliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="329,262,0,0" VerticalAlignment="Top" Height="39" Width="93" Click="eliminarButton_Click"/>
-        <Button x:Name="buscarButton" Content="Buscar" HorizontalAlignment="Left" Margin="141,31,0,0" VerticalAlignment="Top" Height="39" Width="93" Click="buscarButton_Click"/>
-        <Label Content="Persona Id:" HorizontalAlignment="Left" Margin="22,124,0,0" VerticalAlignment="Top" Height="30" Width="83"/>
-        <TextBox x:Name="personaidTextBox" HorizontalAlignment="Left" Margin="121,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
-        <ComboBox x:Name="PersonaComboBox" HorizontalAlignment="Left" Margin="333,146,0,0" VerticalAlignment="Top" Width="120" AutomationProperties.Name="PersonaComboBox"/>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="23,36,0,0" VerticalAlignment="Top" Height="30" Width="83" FontSize="13"/>
+        <Label Content="Monto:" HorizontalAlignment="Left" Margin="24,158,0,0" VerticalAlignment="Top" Height="30" Width="83" FontSize="13"/>
+        <Label Content="Comentario:" HorizontalAlignment="Left" Margin="24,185,0,0" VerticalAlignment="Top" Height="30" Width="83" FontSize="13"/>
+        <Label Content="Fecha" HorizontalAlignment="Left" Margin="256,36,0,0" VerticalAlignment="Top" Height="30" Width="83" FontSize="13"/>
+        <TextBox x:Name="idTextBox" HorizontalAlignment="Left" Margin="54,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" Height="25"/>
+        <TextBox x:Name="montoTextBox" HorizontalAlignment="Left" Margin="116,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183"/>
+        <TextBox x:Name="comentarioTextBox" HorizontalAlignment="Left" Margin="116,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183"/>
+        <DatePicker x:Name="fechaDatePicker" HorizontalAlignment="Left" Margin="301,37,0,0" VerticalAlignment="Top" Width="118" Background="{x:Null}"/>
+        <Button x:Name="nuevoButton" Content="      Nuevo" HorizontalAlignment="Left" Margin="28,251,0,0" VerticalAlignment="Top" Height="46" Width="101" Click="nuevoButton_Click" FontWeight="Bold" FontSize="14" BorderBrush="#FF020000">
+            <Button.Background>
+                <ImageBrush ImageSource="icons8-nuevo-32.png" Stretch="None" AlignmentX="Left"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="guardarButton" Content="       Guardar" HorizontalAlignment="Left" Margin="161,250,0,0" VerticalAlignment="Top" Height="47" Width="100" Click="guardarButton_Click" FontWeight="Bold" FontSize="14" BorderBrush="#FF020000">
+            <Button.Background>
+                <ImageBrush ImageSource="icons8-guardar-30.png" Stretch="None" AlignmentX="Left"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="eliminarButton" Content="    Eliminar" HorizontalAlignment="Left" Margin="290,249,0,0" VerticalAlignment="Top" Height="47" Width="101" Click="eliminarButton_Click" FontWeight="Bold" FontSize="14" BorderBrush="#FF020000">
+            <Button.Background>
+                <ImageBrush ImageSource="icons8-eliminar-24.png" Stretch="None" AlignmentX="Left"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="buscarButton" Content="    Buscar" HorizontalAlignment="Left" Margin="123,28,0,0" VerticalAlignment="Top" Height="45" Width="96" Click="buscarButton_Click" FontWeight="Bold" FontSize="14" BorderBrush="#FF020000">
+            <Button.Background>
+                <ImageBrush Stretch="None" ImageSource="icons8-encuentra-hombre-usuario-26.png" AlignmentX="Left"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Persona:" HorizontalAlignment="Left" Margin="24,122,0,0" VerticalAlignment="Top" Height="30" Width="83" FontSize="13"/>
+        <ComboBox x:Name="PersonaComboBox" HorizontalAlignment="Left" Margin="116,125,0,0" VerticalAlignment="Top" Width="183" AutomationProperties.Name="PersonaComboBox"/>
 
     </Grid>
 </Window>

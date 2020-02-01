@@ -6,27 +6,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegistroIncripciones.UI.Registros"
         mc:Ignorable="d"
-        Title="rPersona" Height="500" Width="500">
-    <Grid>
-        
-        <Label Content="ID" HorizontalAlignment="Left" Margin="45,43,0,0" VerticalAlignment="Top"/>
-        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="20,110,0,0" VerticalAlignment="Top" Width="100"/>
-        <Label Content="Telefono:" HorizontalAlignment="Left" Margin="18,144,0,0" VerticalAlignment="Top" Width="100"/>
-        <Label Content="Cedula:" HorizontalAlignment="Left" Margin="20,174,0,0" VerticalAlignment="Top" Width="100"/>
-        <Label Content="Direccion:" HorizontalAlignment="Left" Margin="19,208,0,0" VerticalAlignment="Top" Width="100"/>
-        <Label Content="Fecha Nacimiento:" HorizontalAlignment="Left" Margin="18,246,0,0" VerticalAlignment="Top" Width="112"/>
-        <TextBox x:Name="IdTextBox" HorizontalAlignment="Left" Margin="87,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79" Height="22"/>
-        <TextBox x:Name="balanceTextBox" HorizontalAlignment="Left" Margin="153,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="25" IsReadOnly="True"/>
-        <TextBox x:Name="telefonoTextBox" HorizontalAlignment="Center" Margin="0,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="22"/>
-        <TextBox x:Name="cedulaTextBox" HorizontalAlignment="Center" Margin="0,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" Height="22"/>
-        <TextBox x:Name="direccionTextBox" HorizontalAlignment="Center" Margin="0,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" Height="22"/>
-        <DatePicker x:Name="fechanacimientoDatePicker" HorizontalAlignment="Left" Margin="151,249,0,0" VerticalAlignment="Top" Width="196"/>
-        <Label Content="Balance:" HorizontalAlignment="Left" Margin="18,287,0,0" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="nombreTextBox" HorizontalAlignment="Center" Margin="0,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" Height="22"/>
-        <Button x:Name="buscarButton" Content="Buscar" HorizontalAlignment="Left" Margin="179,32,0,0" VerticalAlignment="Top" Height="43" Width="95" Click="buscarButton_Click"/>
-        <Button x:Name="nuevoButton" Content="Nuevo" HorizontalAlignment="Left" Margin="32,357,0,0" VerticalAlignment="Top" Height="43" Width="95" Click="nuevoButton_Click"/>
-        <Button x:Name="guardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="192,355,0,0" VerticalAlignment="Top" Height="43" Width="95" Click="guardarButton_Click"/>
-        <Button x:Name="eliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="347,353,0,0" VerticalAlignment="Top" Height="43" Width="95" Click="eliminarButton_Click"/>
+        Title="rPersona" Height="480" Width="450">
+    <Grid Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+
+        <Label Content="ID" HorizontalAlignment="Left" Margin="30,44,0,0" VerticalAlignment="Top" FontSize="13"/>
+        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="22,128,0,0" VerticalAlignment="Top" Width="100" FontSize="13"/>
+        <Label Content="Teléfono:" HorizontalAlignment="Left" Margin="23,157,0,0" VerticalAlignment="Top" Width="100" FontSize="13"/>
+        <Label Content="Cédula :" HorizontalAlignment="Left" Margin="23,186,0,0" VerticalAlignment="Top" Width="100" FontSize="13"/>
+        <Label Content="Dirección:" HorizontalAlignment="Left" Margin="22,215,0,0" VerticalAlignment="Top" Width="100" FontSize="13"/>
+        <Label Content="Fecha Nacimiento:" HorizontalAlignment="Left" Margin="22,244,0,0" VerticalAlignment="Top" Width="112" FontSize="13"/>
+        <TextBox x:Name="IdTextBox" HorizontalAlignment="Left" Margin="64,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" Height="22"/>
+        <TextBox x:Name="balanceTextBox" HorizontalAlignment="Left" Margin="307,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="103" Height="25" IsReadOnly="True"/>
+        <TextBox x:Name="telefonoTextBox" HorizontalAlignment="Left" Margin="142,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267" Height="22"/>
+        <TextBox x:Name="cedulaTextBox" HorizontalAlignment="Left" Margin="141,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" Height="22"/>
+        <TextBox x:Name="direccionTextBox" HorizontalAlignment="Left" Margin="140,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="269" Height="22"/>
+        <DatePicker x:Name="fechanacimientoDatePicker" HorizontalAlignment="Left" Margin="140,248,0,0" VerticalAlignment="Top" Width="269"/>
+        <Label Content="Balance:" HorizontalAlignment="Left" Margin="242,300,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold"/>
+        <TextBox x:Name="nombreTextBox" HorizontalAlignment="Left" Margin="143,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" Height="22"/>
+        <Button x:Name="buscarButton" Content="  Buscar" HorizontalAlignment="Left" Margin="145,37,0,0" VerticalAlignment="Top" Height="43" Width="107" Click="buscarButton_Click" FontWeight="Bold" FontSize="14" BorderBrush="#FF020000">
+            <Button.Background>
+                <ImageBrush ImageSource="icons8-encuentra-hombre-usuario-26.png" Stretch="None" AlignmentX="Left"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="nuevoButton" Content="Nuevo" HorizontalAlignment="Left" Margin="15,371,0,0" VerticalAlignment="Top" Height="51" Width="118" Click="nuevoButton_Click" FontWeight="Bold" FontSize="14" OpacityMask="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" BorderBrush="#FF0A0000">
+            <Button.Background>
+                <ImageBrush ImageSource="icons8-nuevo-32.png" Stretch="None" AlignmentX="Left"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="guardarButton" Content="   Guardar" HorizontalAlignment="Left" Margin="155,369,0,0" VerticalAlignment="Top" Height="53" Width="116" Click="guardarButton_Click" FontWeight="Bold" FontSize="14" BorderBrush="#FF020000">
+            <Button.Background>
+                <ImageBrush ImageSource="icons8-guardar-30.png" Stretch="None" AlignmentX="Left"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="eliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="292,366,0,0" VerticalAlignment="Top" Height="55" Width="116" Click="eliminarButton_Click" FontWeight="Bold" FontSize="14" BorderBrush="#FF020000">
+            <Button.Background>
+                <ImageBrush ImageSource="icons8-eliminar-24.png" AlignmentX="Left" Stretch="None"/>
+            </Button.Background>
+        </Button>
 
 
 

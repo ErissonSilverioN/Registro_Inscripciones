@@ -7,19 +7,23 @@
         mc:Ignorable="d"
         Title="cInscripciones" Height="450" Width="650">
     <Grid Margin="10,0,8,0">
-        <Label Content="Desde" HorizontalAlignment="Left" Margin="7,20,0,0" VerticalAlignment="Top"/>
-        <Label Content="Hasta" HorizontalAlignment="Left" Margin="125,20,0,0" VerticalAlignment="Top"/>
-        <Label Content="Filtro" HorizontalAlignment="Left" Margin="246,21,0,0" VerticalAlignment="Top"/>
-        <Label Content="Criterio" HorizontalAlignment="Left" Margin="363,22,0,0" VerticalAlignment="Top"/>
+        <Label Content="Desde" HorizontalAlignment="Left" Margin="7,20,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Hasta" HorizontalAlignment="Left" Margin="125,20,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Filtro" HorizontalAlignment="Left" Margin="246,21,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Criterio" HorizontalAlignment="Left" Margin="363,22,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <DatePicker x:Name="desdeDatePicker" HorizontalAlignment="Left" Margin="11,45,0,0" VerticalAlignment="Top" Width="108"/>
         <DatePicker x:Name="hastaDatePicker" HorizontalAlignment="Left" Margin="131,45,0,0" VerticalAlignment="Top" Width="108"/>
         <ComboBox x:Name="filtroComboBox" HorizontalAlignment="Left" Margin="251,46,0,0" VerticalAlignment="Top" Width="104">
-            <ComboBoxItem> ID </ComboBoxItem>
+            <ComboBoxItem>ID</ComboBoxItem>
             <ComboBoxItem>Monto</ComboBoxItem>
         </ComboBox>
         <TextBox x:Name="criterioTextBox" HorizontalAlignment="Left" Margin="367,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121"/>
-        <Button x:Name="consultarButton" Content="Consultar" HorizontalAlignment="Left" Margin="507,34,0,0" VerticalAlignment="Top" Width="125" Height="35" Click="consultarButton_Click"/>
-        <DataGrid x:Name="consultarDataGrid" Margin="0,74,0,7" ItemsSource="{Binding}" AutoGenerateColumns="False" >
+        <Button x:Name="consultarButton" Content="    Consultar" HorizontalAlignment="Left" Margin="497,37,0,0" VerticalAlignment="Top" Width="122" Height="35" Click="consultarButton_Click" FontSize="14" FontWeight="Bold" BorderBrush="#FF020000">
+            <Button.Background>
+                <ImageBrush ImageSource="icons8-google-web-search-24.png" Stretch="None" AlignmentX="Left"/>
+            </Button.Background>
+        </Button>
+        <DataGrid x:Name="consultarDataGrid" Margin="-1,83,0,9" ItemsSource="{Binding}" AutoGenerateColumns="False" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="InscripcionId"  Binding="{Binding InscripcionId}"/>
                 <DataGridTextColumn Header="PersonaId"  Binding="{Binding PersonaId}"/>

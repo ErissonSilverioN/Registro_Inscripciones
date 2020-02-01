@@ -64,7 +64,7 @@ namespace RegistroIncripciones.UI.Consultas
             }
 
             consultarDataGrid.ItemsSource = listado;
-            consultarDataGrid.ItemsSource = null;
+            
         }
     }
 }

@@ -7,23 +7,41 @@
         mc:Ignorable="d"
         Title="cPersonas" Height="450" Width="700">
     <Grid Margin="0,0,6,0" Height="425">
-        <Label Content="Desde" HorizontalAlignment="Left" Margin="19,9,0,0" VerticalAlignment="Top"/>
-        <Label Content="Hasta" HorizontalAlignment="Left" Margin="142,9,0,0" VerticalAlignment="Top"/>
-        <Label Content="Filtro" HorizontalAlignment="Left" Margin="264,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Criterio" HorizontalAlignment="Left" Margin="367,10,0,0" VerticalAlignment="Top"/>
-        <DatePicker x:Name="desdeDatePicker" HorizontalAlignment="Left" Margin="23,37,0,0" VerticalAlignment="Top" Width="110"/>
-        <DatePicker x:Name="hastaDatePicker" HorizontalAlignment="Left" Margin="148,37,0,0" VerticalAlignment="Top" Width="110"/>
-        <ComboBox x:Name="filtroComboBox" HorizontalAlignment="Left" Margin="269,37,0,0" VerticalAlignment="Top" Width="93" IsSynchronizedWithCurrentItem="False">
-            <ComboBoxItem> ID </ComboBoxItem>
-            <ComboBoxItem> Nombre </ComboBoxItem>
-            <ComboBoxItem> Cedula</ComboBoxItem>
-            <ComboBoxItem> Direccion</ComboBoxItem>
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+        <Label Content="Desde" HorizontalAlignment="Left" Margin="15,9,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Hasta" HorizontalAlignment="Left" Margin="138,9,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Filtro" HorizontalAlignment="Left" Margin="260,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Criterio" HorizontalAlignment="Left" Margin="361,12,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <DatePicker x:Name="desdeDatePicker" HorizontalAlignment="Left" Margin="17,37,0,0" VerticalAlignment="Top" Width="110"/>
+        <DatePicker x:Name="hastaDatePicker" HorizontalAlignment="Left" Margin="142,37,0,0" VerticalAlignment="Top" Width="110"/>
+        <ComboBox x:Name="filtroComboBox" HorizontalAlignment="Left" Margin="263,38,0,0" VerticalAlignment="Top" Width="93" IsSynchronizedWithCurrentItem="False">
+            <ComboBoxItem>ID</ComboBoxItem>
+            <ComboBoxItem>Nombre</ComboBoxItem>
+            <ComboBoxItem>Cedula</ComboBoxItem>
+            <ComboBoxItem>Direccion</ComboBoxItem>
         </ComboBox>
 
 
-        <TextBox x:Name="criterioTextBox" HorizontalAlignment="Left" Margin="371,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
-        <Button x:Name="consultarButton" Content="Consultar" HorizontalAlignment="Left" Margin="553,22,0,0" VerticalAlignment="Top" Height="36" Width="115" Click="consultarButton_Click"/>
-        <DataGrid x:Name="consultarDataGrid" Margin="8,67,6,9"/>
+        <TextBox x:Name="criterioTextBox" HorizontalAlignment="Left" Margin="365,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
+        <Button x:Name="consultarButton" Content="    Consultar" HorizontalAlignment="Left" Margin="561,29,0,0" VerticalAlignment="Top" Height="36" Width="100" Click="consultarButton_Click" BorderBrush="#FF020000" FontWeight="Bold" FontSize="14">
+            <Button.Background>
+                <ImageBrush ImageSource="icons8-google-web-search-24.png" Stretch="None" AlignmentX="Left"/>
+            </Button.Background>
+        </Button>
+        <DataGrid x:Name="consultarDataGrid" Margin="8,77,5,28" ItemsSource="{Binding}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="PersonaId"  Binding="{Binding PersonaId}"/>
+                <DataGridTextColumn Header="Nombre"  Binding="{Binding Nombre}"/>
+                <DataGridTextColumn Header="Telefono"  Binding="{Binding Telefono}"/>
+                <DataGridTextColumn Header="Cedula"  Binding="{Binding Cedula}"/>
+                <DataGridTextColumn Header="Direccion"  Binding="{Binding Direccion}"/>
+                <DataGridTextColumn Header="FechaNacimiento"  Binding="{Binding FechaNacimiento}"/>
+                <DataGridTextColumn Header="Balance"  Binding="{Binding Balance}"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
 
     </Grid>
 </Window>
