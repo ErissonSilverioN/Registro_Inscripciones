@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistroIncripciones", "RegistroIncripciones\RegistroIncripciones.csproj", "{7F5630AD-8455-4402-8819-ADA03CBA930E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistroIncripciones", "RegistroIncripciones\RegistroIncripciones.csproj", "{7F5630AD-8455-4402-8819-ADA03CBA930E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistroIncripcionesTests", "RegistroIncripcionesTests\RegistroIncripcionesTests.csproj", "{7D5B3CEB-B468-4467-B109-BEA5A5E52447}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7F5630AD-8455-4402-8819-ADA03CBA930E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F5630AD-8455-4402-8819-ADA03CBA930E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F5630AD-8455-4402-8819-ADA03CBA930E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D5B3CEB-B468-4467-B109-BEA5A5E52447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D5B3CEB-B468-4467-B109-BEA5A5E52447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D5B3CEB-B468-4467-B109-BEA5A5E52447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D5B3CEB-B468-4467-B109-BEA5A5E52447}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
